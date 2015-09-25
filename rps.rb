@@ -1,4 +1,4 @@
-# Rock Paper Siscors Game
+# Rock Paper Sisscors Game
 
 CHOICES = { 'r' => 'Rock', 'p' => 'Paper', 's' => 'Sisscors' }
 print 'Welcome to Rock Paper Sisscors!'
