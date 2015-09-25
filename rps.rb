@@ -19,9 +19,9 @@ loop do
 
   if user_choice == computer_choice
     puts "It's a tie! You both selected: #{user_choice}"
-  elsif (user_choice == 'p' && computer_choice == 'r') ||
-        (user_choice == 'r' && computer_choice == 's') ||
-        (user_choice == 's' && computer_choice == 'p')
+  elsif (user_choice == 'P' && computer_choice == 'R') ||
+        (user_choice == 'R' && computer_choice == 'S') ||
+        (user_choice == 'S' && computer_choice == 'P')
     puts 'You won!'
   else
     puts 'The Computer won!'
