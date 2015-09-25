@@ -5,6 +5,16 @@ print 'Welcome to Rock Paper Sisscors!'
 puts ''
 puts ''
 
+def display_winning_message(winning_choice)
+    case winning_choice
+    when 'R'
+      puts 'Rock crushes Scissors!'
+    when 'P'
+      puts 'Paper wraps Rock!'
+    when 'S'
+      puts 'Scissors cuts Papper!'
+end
+
 loop do
   # Play picks their fate
   begin
@@ -22,10 +32,12 @@ loop do
   elsif (user_choice == 'P' && computer_choice == 'R') ||
         (user_choice == 'R' && computer_choice == 'S') ||
         (user_choice == 'S' && computer_choice == 'P')
+    display_winning_message(user_choice)
     puts 'You won!'
   else
+    display_winning_message(computer_choice)
     puts 'The Computer won!'
-    puts "The Computer selected: #{computer_choice}"
+    #puts "The Computer selected: #{computer_choice}"
   end
   puts "Would you like to play agin?"
   user_continue = gets.chomp.capitalize
