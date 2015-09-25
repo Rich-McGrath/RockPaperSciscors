@@ -18,13 +18,13 @@ loop do
   computer_choice = CHOICES.keys.sample
 
   if user_choice == computer_choice
-    puts "It's a tim! You both selected #{CHOICES.values(user_choice)}"
+    puts "It's a tim! You both selected: #{user_choice}"
   elsif (user_choice == 'p' && computer_choice == 'r') ||
         (user_choice == 'r' && computer_choice == 's') ||
         (user_choice == 's' && computer_choice == 'p')
     puts 'You won!'
   else
     puts 'The Computer won!'
-    puts "The Computer selected #{computer_choice}"
+    puts "The Computer selected: #{computer_choice}"
   end
 end
