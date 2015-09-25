@@ -18,7 +18,7 @@ loop do
   computer_choice = CHOICES.keys.sample
 
   if user_choice == computer_choice
-    puts "It's a time! You both selected: #{user_choice}"
+    puts "It's a tie! You both selected: #{user_choice}"
   elsif (user_choice == 'p' && computer_choice == 'r') ||
         (user_choice == 'r' && computer_choice == 's') ||
         (user_choice == 's' && computer_choice == 'p')
@@ -27,4 +27,13 @@ loop do
     puts 'The Computer won!'
     puts "The Computer selected: #{computer_choice}"
   end
+  puts "Would you like to play agin?"
+  user_continue = gets.chomp.capitalize
+  if user_continue == 'N' || user_continue == 'Y'
+    break if user_continue == 'N'
+  else
+    puts 'Please Enter a "N" or No or "Y" for Yes'
+    next
+  end
+
 end
