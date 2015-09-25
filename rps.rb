@@ -6,17 +6,18 @@ puts ''
 puts ''
 
 def display_winning_message(winning_choice)
-    case winning_choice
-    when 'R'
-      puts 'Rock crushes Scissors!'
-    when 'P'
-      puts 'Paper wraps Rock!'
-    when 'S'
-      puts 'Scissors cuts Papper!'
+  case winning_choice
+  when 'R'
+    puts 'Rock crushes Scissors!'
+  when 'P'
+    puts 'Paper wraps Rock!'
+  when 'S'
+    puts 'Scissors cuts Papper!'
+  end
 end
 
 loop do
-  # Play picks their fate
+  # Player picks their fate
   begin
     puts 'Decide your fate! Please choose Rock, Paper or Sisscors'
     puts ''
@@ -24,7 +25,7 @@ loop do
     user_choice = gets.chomp.capitalize
   end until CHOICES.keys.include?(user_choice)
 
-  # computer makes a picks
+  # Computer makes a picks
   computer_choice = CHOICES.keys.sample
 
   if user_choice == computer_choice
@@ -37,13 +38,11 @@ loop do
   else
     display_winning_message(computer_choice)
     puts 'The Computer won!'
-    #puts "The Computer selected: #{computer_choice}"
   end
-  puts "Would you like to play agin?"
+
+  puts 'Would you like to play agin? (y/n)'
   user_continue = gets.chomp.capitalize
   break if user_continue != 'y'
-
-
 end
 
 puts 'Hasta la vista baby!'
