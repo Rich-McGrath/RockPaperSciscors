@@ -42,7 +42,7 @@ loop do
 
   puts 'Would you like to play agin? (y/n)'
   user_continue = gets.chomp
-  break if user_continue != 'Y'
+  break unless user_continue.start_with? 'Y'
 end
 
 puts 'Hasta la vista baby!'
