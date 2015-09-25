@@ -41,11 +41,7 @@ loop do
   end
   puts "Would you like to play agin?"
   user_continue = gets.chomp.capitalize
-  if user_continue == 'N' || user_continue == 'Y'
-    break if user_continue == 'N'
-  else
-    puts 'Please Enter a "N" or No or "Y" for Yes'
-    next
-  end
+  break if user_continue != 'y'
+
 
 end
