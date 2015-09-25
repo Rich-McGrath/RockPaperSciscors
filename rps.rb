@@ -1,6 +1,6 @@
-# Rock Paper Sisscors Game
+# Rock Paper Scisscors Game
 
-CHOICES = { 'R' => 'Rock', 'P' => 'Paper', 'S' => 'Sisscors' }
+CHOICES = { 'R' => 'Rock', 'P' => 'Paper', 'S' => 'Scisscors' }
 print 'Welcome to Rock Paper Sisscors!'
 puts ''
 puts ''
