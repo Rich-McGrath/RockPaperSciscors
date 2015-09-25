@@ -41,7 +41,7 @@ loop do
   end
 
   puts 'Would you like to play agin? (y/n)'
-  user_continue = gets.chomp
+  user_continue = gets..capitalize
   break unless user_continue.start_with? 'Y'
 end
 
