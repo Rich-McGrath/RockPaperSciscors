@@ -1,6 +1,6 @@
 # Rock Paper Sisscors Game
 
-CHOICES = { 'r' => 'Rock', 'p' => 'Paper', 's' => 'Sisscors' }
+CHOICES = { 'R' => 'Rock', 'P' => 'Paper', 'S' => 'Sisscors' }
 print 'Welcome to Rock Paper Sisscors!'
 puts ''
 puts ''
@@ -11,14 +11,14 @@ loop do
     puts 'Decide your fate! Please choose Rock, Paper or Sisscors'
     puts ''
     puts 'Please select one: R = Rock, P = Paper, S = Sisscors'
-    user_choice = gets.chomp.downcase
+    user_choice = gets.chomp.capitalize
   end until CHOICES.keys.include?(user_choice)
 
   # computer makes a picks
   computer_choice = CHOICES.keys.sample
 
   if user_choice == computer_choice
-    puts "It's a tim! You both selected: #{user_choice}"
+    puts "It's a time! You both selected: #{user_choice}"
   elsif (user_choice == 'p' && computer_choice == 'r') ||
         (user_choice == 'r' && computer_choice == 's') ||
         (user_choice == 's' && computer_choice == 'p')
